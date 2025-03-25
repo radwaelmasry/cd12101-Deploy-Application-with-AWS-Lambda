@@ -25,7 +25,6 @@ package:
     - docs/**
     - README.md
     - package-lock.json
-
 provider:
   name: aws
   runtime: nodejs18.x
@@ -58,7 +57,7 @@ provider:
     TODOS_BY_USER_INDEX: TodosByUserIndex
     ATTACHMENTS_S3_BUCKET: todos-attachments-${self:provider.stage}-relmasry
     SIGNED_URL_EXPIRATION: 300
-    AUTH_0_JWKS_URL: https://dev-inrw113fveqldu4e.us.auth0.com/.well-known/jwks.json
+    AUTH_0_JWKS_URL: https://dev-blk10yf4ya4pxokn.us.auth0.com/.well-known/jwks.json
 
   tracing:
     lambda: true

@@ -1,9 +1,7 @@
 //import 'source-map-support/register'
 
-
+//import * as uuid from 'uuid'
 import { v4 as uuidv4 } from 'uuid';
-
-
 
 import { TodosAccess } from '../dataLayer/TodosAccess'
 import { TodosStorage } from '../dataLayer/TodosStorage'
@@ -25,8 +23,8 @@ export async function getTodos(userId: string): Promise<TodoItem[]> {
 }
 
 export async function createTodo(userId: string, createTodoRequest: CreateTodoRequest): Promise<TodoItem> {
-  const todoId = uuidv4();
-
+  //const todoId = uuid.v4()
+  const todoId =uuidv4();
   const newItem: TodoItem = {
     userId,
     todoId,
