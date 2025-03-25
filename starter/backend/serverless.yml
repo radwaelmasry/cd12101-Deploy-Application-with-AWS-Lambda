@@ -33,25 +33,7 @@ provider:
   region: ${opt:region, 'us-east-1'}
   deploymentBucket:
     blockPublicAccess: true
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - cloudformation:DescribeStackResource
-            - cloudformation:CreateStack
-            - cloudformation:UpdateStack
-          Resource: "*"
-        - Effect: Allow
-          Action:
-            - s3:CreateBucket
-            - s3:PutBucketPolicy
-            - s3:GetBucketLocation
-            - s3:DeleteBucket
-            - s3:ListAllMyBuckets
-            - s3:DeleteObject
-            - s3:ListBucket
-          Resource: "*"
+  
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_BY_USER_INDEX: TodosByUserIndex
